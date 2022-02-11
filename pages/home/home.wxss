@@ -1,0 +1,148 @@
+.top_bar{
+    height: 80rpx;
+    background-color: orangered;
+    display: flex;
+    align-items:Center;
+
+}
+
+.txt_position{
+   margin-left: 10rpx;
+   color: white;
+   width: 80rpx;
+   font-size: 26rpx;
+}
+
+.picker{
+   margin-left: 20rpx;
+   color: white;
+}
+
+.img_city_select
+{
+   height: 30rpx;
+   width: 30rpx;
+}
+
+.img_other_select{
+    height: 40rpx;
+   width: 40rpx;
+   margin-left: 10rpx;   
+}
+
+.input
+{
+   width: 500rpx;
+   height: 60rpx;
+   margin-left: 10rpx;   
+   background: white;
+   border-radius: 20rpx; 
+   padding-left: 20rpx;
+   padding-right: 20rpx;
+}
+
+.scrollview {
+    background-color: white;
+    height: 100%;
+}
+
+.view_top
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    padding: 20rpx;
+}
+
+
+.view_bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    padding: 20rpx;
+}
+
+.item{
+    background-color: white;
+    padding-bottom: 20rpx;
+}
+
+.img_show{
+    width: 100% ;
+}
+
+.txt_nickname{
+    margin-left: 20rpx;
+    font-size: 30rpx;
+    margin-top: 10rpx;
+}
+
+.img_gender
+{
+    width: 30rpx;
+    height: 30rpx;
+    margin-left: 10rpx;
+    margin-top: 10rpx;
+}
+
+.txt_price
+{
+    color: red;
+    font-size: 35rpx;
+    margin-top: 10rpx;
+    float: right;
+    margin-right: 20rpx;
+}
+
+.location_img {
+    height: 30rpx;
+    width: 30rpx;
+    /*margin-top: 30rpx;*/
+    /*margin-left: 20rpx;*/
+}
+
+.txt_city{
+    margin-top: 30rpx;
+    /*margin-left: 20rpx;*/
+    font-size: 30rpx;
+}
+
+.txt_job{
+    margin-top: 30rpx;
+    margin-left: 20rpx;
+    font-size: 30rpx;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+    padding-top: 5rpx;
+    padding-bottom: 5rpx;
+    border-style: solid;
+    border-width: 1rpx;
+    border-color: orangered;
+}
+
+.btn_detail{
+     margin: 20rpx;
+}
+
+.txt_description
+{
+    margin-top: 30rpx;
+    font-size: 30rpx; 
+    align-self: flex-start;
+    max-inline-size: 2;
+}
+
+.row2 {
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+}
+
+.row3 {
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+}
+

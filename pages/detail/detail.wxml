@@ -1,0 +1,42 @@
+
+<!--detail.wxml-->
+<view class="container" wx:key="{{data}}">
+      <image src="{{data.avatar}}" mode="widthFix" class="cover_img"></image>
+  
+      <view class = "row1">
+         <text class = "txt_nickname" >{{data.nickname}}           </text>
+          <image src="{{data.sex=='man' ? '../../img/ic_male.png' : '../../img/ic_female.png'}}" class="img_gender"/>
+        <text class = "txt_price" >${{data.rent}}/小时</text>
+      </view>
+
+      <view class = "row2">
+           <text class = "txt_city">{{data.province}}{{data.city}}</text>
+           <text class = "txt_job">{{data.job}}</text>
+      </view>
+
+        <view class = "row3">
+           <text class = "txt_description">{{data.description}}            </text>
+      </view>
+
+
+      <view class="line"></view>
+
+      <view class = "view_range">
+  
+            <view >出租范围</view>
+            <label class="checkbox_range" wx:for="{{data.salesRange}}">
+              <view class="txt_salerange">{{item}}</view>
+            </label>
+
+            <view class="line2"></view>
+      </view>
+
+
+   <view class = "view_contact">
+      <text class="qq">qq：{{data.qq}}</text>
+      <text class="wechat">微信：{{data.wxNumber}}</text>
+   </view>
+    
+</view>
+
+<button class = "btn_order" bindtap="bindBooking" data-id="{{id}}">立即预约</button>

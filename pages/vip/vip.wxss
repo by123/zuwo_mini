@@ -1,0 +1,2 @@
+/* pages/vip/vip.wxss */
+@import "../common/lib/weui.wxss";

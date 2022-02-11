@@ -1,0 +1,7 @@
+<!--pages/about/about.wxml-->
+<view class= "container">
+    <view class = "view_title">
+        <image src="../../img/ic_default_head.png" class="img_logo"/>
+        <text class = "txt_title">约吗 v1.0</text>
+    </view>
+</view>

@@ -1,0 +1,127 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="weui-cells__title">形象照片</view>
+    <view class="page__bd page__bd_spacing" wx:if="{{!accountInfo || !accountInfo.avatar}}">
+        <view class="button-sp-area">
+            <button class="weui-btn" type="default" plain="true" bindtap="bindSelectPhoto">选择照片</button>
+        </view>
+    </view>
+    <image wx:if="{{accountInfo && accountInfo.avatar}}" src="{{accountInfo.avatar}}" mode="widthFix" bindtap="bindSelectPhoto" style="width: 100%;"></image>
+
+    <view class="weui-cells__title">基本信息</view>
+    <view class="weui-cells weui-cells_after-title">
+
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">昵称</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input wx:if="{{accountInfo.state != 'sales'}}" class="weui-input" placeholder="请输入昵称" bindinput="bindNicknameKeyInput" value="{{accountInfo.nickname}}"/>
+                <text wx:else class="weui-input">{{accountInfo.nickname}}</text>
+            </view>
+        </view>
+
+        <view class="weui-cell weui-cell_select">
+            <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                <view class="weui-label">年龄</view>
+            </view>
+            <view class="weui-cell__bd">
+                <picker wx:if="{{accountInfo.state != 'sales'}}" bindchange="bindAgeChange" value="{{accountInfo.age}}" range="{{ages}}">
+                    <view class="weui-select weui-select_in-select-after">{{ages[accountInfo.age]}}</view>
+                </picker>
+                <text wx:else class="weui-input">{{accountInfo.age}}</text>
+            </view>
+        </view>
+
+        <view class="weui-cell weui-cell_select">
+            <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                <view class="weui-label">职业</view>
+            </view>
+            <view class="weui-cell__bd">
+                <picker wx:if="{{accountInfo.state != 'sales'}}" bindchange="bindJobChange" value="{{jobIndex}}" range="{{jobs}}">
+                    <view class="weui-select weui-select_in-select-after">{{jobs[jobIndex]}}</view>
+                </picker>
+                <text wx:else class="weui-input">{{accountInfo.job}}</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="weui-cells__title">联系方式</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">qq</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input wx:if="{{accountInfo.state != 'sales'}}" class="weui-input" placeholder="请输入qq" bindinput="bindQQKeyInput" value="{{accountInfo.qq}}"/>
+                <text wx:else class="weui-input">{{accountInfo.qq}}</text>
+            </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">微信号</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input wx:if="{{accountInfo.state != 'sales'}}" class="weui-input" placeholder="请输入微信号" bindinput="bindWechatNumberKeyInput" value="{{accountInfo.wxNumber}}"/>
+                <text wx:else class="weui-input">{{accountInfo.wxNumber}}</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="weui-cells__title">出租范围</view>
+    <view class="weui-cells weui-cells_after-title">
+        <checkbox-group wx:if="{{accountInfo.state != 'sales'}}" bindchange="bindRangesChange">
+            <label class="weui-cell weui-check__label" wx:for="{{ranges}}" wx:key="{{item.value}}">
+                <checkbox class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                    <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+                    <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
+                </view>
+                <view class="weui-cell__bd">{{item.value}}</view>
+            </label>
+        </checkbox-group>
+        <label wx:if="{{accountInfo.state == 'sales'}}" class="weui-cell weui-check__label" wx:for="{{accountInfo.salesRange}}" wx:key="{{item.value}}">
+            <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                <icon class="weui-icon-checkbox_success" type="success" size="23"></icon>
+            </view>
+            <view class="weui-cell__bd">{{item}}</view>
+        </label>
+        <!--<view class="weui-cell weui-cell_link">-->
+            <!--<view class="weui-cell__bd">添加更多</view>-->
+        <!--</view>-->
+    </view>
+
+    <view class="weui-cells__title">出租信息</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+            <view class="weui-cell__hd">
+                <view class="weui-label">租金</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input wx:if="{{accountInfo.state != 'sales'}}" class="weui-input" placeholder="请输入租金" bindinput="bindRentKeyInput" value="{{accountInfo.rent}}" />
+                <text wx:else class="weui-input">{{accountInfo.rent}}</text>
+            </view>
+            <view class="weui-cell__ft">
+                <view class="weui-vcode-btn">元/小时</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="weui-cells__title">一句话介绍自己</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <textarea wx:if="{{accountInfo.state != 'sales'}}" class="weui-textarea" placeholder="如：我就是我，是不一样的烟火" style="height: 3.3em" bindinput="bindDescriptionKeyInput" value="{{accountInfo.description}}"/>
+                <text wx:else>{{accountInfo.description}}</text>
+                <view wx:if="{{accountInfo.state != 'sales'}}" class="weui-textarea-counter">{{accountInfo.description.length}}/200</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="weui-btn-area">
+        <button wx:if="{{accountInfo.state != 'sales'}}" class="weui-btn" type="primary" bindtap="bindReleaseButton">发布</button>
+        <button wx:else class="weui-btn" type="warn" bindtap="bindCancelReleaseButton">取消发布</button>
+    </view>
+
+</view>

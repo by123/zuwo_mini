@@ -1,0 +1,145 @@
+@import "../common/lib/weui.wxss";
+
+.container {
+  padding-bottom: 100rpx;
+  display: block;
+  background-color: white;
+}
+
+.cover_img {
+  width: 100%;
+}
+
+.txt_nickname{
+    margin-left: 20rpx;
+    font-size: 30rpx;
+    margin-top: 10rpx;
+}
+
+.img_gender
+{
+    width: 30rpx;
+    height: 30rpx;
+    margin-left: 10rpx;
+    margin-top: 10rpx;
+}
+
+.txt_price
+{
+    color: red;
+    font-size: 35rpx;
+    margin-top: 10rpx;
+    float: right;
+    margin-right: 20rpx;
+}
+
+.txt_city{
+    margin-top: 30rpx;
+    margin-left: 20rpx;
+    font-size: 30rpx;
+}
+
+.txt_job{
+    margin-top: 30rpx;
+    margin-left: 20rpx;
+    font-size: 30rpx;
+}
+
+.btn_detail{
+     margin: 20rpx;
+}
+
+.txt_description
+{
+    margin-top: 30rpx;
+    font-size: 30rpx;
+    align-self: flex-start;
+}
+
+.row3 {
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+}
+
+.txt_job{
+    margin-top: 30rpx;
+    margin-left: 20rpx;
+    font-size: 30rpx;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+    padding-top: 5rpx;
+    padding-bottom: 5rpx;
+    border-style: solid;
+    border-width: 1rpx;
+    border-color: orangered;
+}
+
+.line{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  height: 1rpx;
+  background-color: lightgrey;
+  margin-top: 30rpx;
+}
+
+.qq{
+  display: flex;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+
+.wechat
+{
+    display: flex;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+
+.btn_order
+{
+  position:fixed;
+  bottom: 0;
+  margin-bottom: 0;
+  background-color: orangered;
+  color: white;
+  border-radius: 0;
+  width: 100%;
+  height: 80rpx;
+  
+}
+
+.view_range
+{
+    margin-top: 30rpx;
+    margin-left: 20rpx;
+}
+
+.checkbox_range
+{
+    margin-top: 30rpx;
+    display: inline-flex;
+    color: white;
+}
+
+.txt_salerange
+{
+    background-color: orangered;
+    margin-right: 30rpx;
+    border-radius: 10rpx;
+    padding: 10rpx;
+}
+
+
+.line2{
+  margin-right: 20rpx;
+  height: 1rpx;
+  background-color: lightgrey;
+  margin-top: 30rpx;
+}
+
+.view_contact
+{
+    margin-top: 10rpx;
+}

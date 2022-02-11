@@ -1,0 +1,30 @@
+<!--<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view>-->
+
+<view class="weui-cells__title">请填写您的联系方式，我们将会第一时间通知出租者</view>
+
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label">qq</view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入qq" bindinput="bindQQKeyInput" value="{{qq}}"/>
+        </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label">微信号</view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入微信号" bindinput="bindWechatNumberKeyInput" value="{{wxNumber}}"/>
+        </view>
+    </view>
+
+</view>
+
+<!--<view class="weui-cells__tips">请填写您的联系方式，我们将会第一时间通知出租者</view>-->
+
+<view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="bindConfirm">确定</button>
+</view>

@@ -1,0 +1,45 @@
+<!--pages/vip/vip.wxml-->
+
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+
+    <view url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="../../img/ic_vip_grey.png" />
+            <!--<image class="weui-media-box__thumb" src="../../img/ic_vip_active.png" />-->
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">{{accountInfo.nickname}}</view>
+            <view class="weui-media-box__desc">{{days == 0 ? '普通会员' : '高级会员(' + days + '天)'}}</view>
+        </view>
+    </view>
+
+    <!--<view class="weui-cells__title">title</view>-->
+    <view class="weui-cells weui-cells_after-title">
+        <radio-group bindchange="bindTypeChange">
+            <label class="weui-cell weui-check__label" wx:for="{{types}}" wx:key="{{item}}">
+                <radio class="weui-check" value="{{item.id}}" checked="{{item.checked}}"/>
+
+                <view class="weui-cell__bd">{{item.price}}元/{{item.days}}天</view>
+                <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+                    <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+                </view>
+            </label>
+        </radio-group>
+        <!--<view class="weui-cell weui-cell_link">-->
+        <!--<view class="weui-cell__bd">添加更多</view>-->
+        <!--</view>-->
+    </view>
+
+    <view class="weui-cells__tips">会员说明</view>
+    <!--<view class="weui-cells__tips">1.普通会员每天只能查看3位出租人信息</view>-->
+    <!--<view class="weui-cells__tips">2.普通会员每天只能查看1位出租人联系方式</view>-->
+    <view class="weui-cells__tips">1.高级会员可查看出租人个人资料</view>
+    <view class="weui-cells__tips">2.高级会员可查看出租人联系方式</view>
+
+<form report-submit="true"  bindsubmit="bindToBeVip" class="weui-btn-area">  
+    <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" form-type="submit" >{{days == 0 ? '成为高级会员' : '充值'}}</button>
+    </view>
+
+</form>  
+</view>

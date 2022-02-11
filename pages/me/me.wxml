@@ -1,0 +1,39 @@
+
+<!--me.wxml-->
+<view class="container">
+    <view class = "view_head">
+      <image src="{{userInfo.avatarUrl}}" class="img_head" background-size="cover"></image>
+
+      <text class= "txt_nickname">{{userInfo.nickName}}</text>
+    </view>
+
+    <navigator url="../order/order" class="navigator">
+      <view class="navigator-text">预约查询</view>
+      <view class="navigator-arrow"></view>
+    </navigator>
+
+     <navigator url="../vip/vip" class="navigator">
+      <view class="navigator-text">会员中心</view>
+      <view class="navigator-arrow"></view>
+    </navigator>
+
+    <navigator url="../about/about" class="navigator">
+      <view class="navigator-text">关于</view>
+      <view class="navigator-arrow"></view>
+    </navigator>
+
+     <!--<navigator url="../about/about" class="navigator">
+      <view class="navigator-text">退出</view>
+      <view class="navigator-arrow"></view>
+    </navigator>-->
+
+  <view class="view_contact">
+      <view class="txt_contact">联系客服</view>
+      <contact-button  
+          class = "btn_contact"
+          type="default-dark" 
+          size="20"
+          session-from="weapp">
+      </contact-button>
+    </view>
+</view>

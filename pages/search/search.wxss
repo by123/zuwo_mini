@@ -1,0 +1,63 @@
+.container
+{
+    display: block;
+    background: white;
+    padding: 20rpx;
+}
+
+.view_gender
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons_gender
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.button_type
+{
+    width: 200rpx;
+    color: black;
+}
+.button_type_hover
+{
+    width: 200rpx;
+    background: orangered;
+    color: white;
+}
+
+.line_style{
+  background-color: lightgray;
+  width: 100%;
+  height: 1rpx;
+  margin-top: 20rpx;
+}
+
+.view_item
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20rpx;
+    width: 100%;
+}
+
+.title_item
+{
+    width: 100rpx;
+}
+
+.picker_item
+{
+    text-align: right;
+    width: 100%;
+}
+
+.btn_confirm
+{
+    margin-top: 80rpx;
+}
+
+

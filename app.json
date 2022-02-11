@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/order/order",
+    "pages/me/me",
+    "pages/detail/detail",
+    "pages/about/about",
+    "pages/search/search",
+    "pages/rentself/rentself",
+    "pages/vip/vip",
+    "pages/booking/booking",
+    "pages/booking_success/booking_success"
+  ],
+  "tabBar": {
+    "color": "#e6e6e6",
+    "selectedColor": "#FFFFFF",
+    "backgroundColor": "#FF4500",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "租人",
+        "iconPath": "img/ic_rent_normal.png",
+        "selectedIconPath": "img/ic_rent_select.png"
+      },
+       {
+        "pagePath": "pages/rentself/rentself",
+        "text": "出租自己",
+        "iconPath": "img/ic_rentself_normal.png",
+        "selectedIconPath": "img/ic_rentself_select.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "img/ic_mine_normal.png",
+        "selectedIconPath": "img/ic_mine_select.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "#FFFFFF",
+    "navigationBarBackgroundColor": "#FF4500",
+    "navigationBarTitleText": "约吗",
+    "navigationBarTextStyle": "#FFFFFF"
+  },
+  "debug": true
+}

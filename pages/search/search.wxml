@@ -1,0 +1,62 @@
+
+<view class="container">
+   <view class="view_gender">
+      <view class= "txt_gender">性别</view>
+      <view class = "buttons_gender">
+         <button class ="{{buttonAllType}}"
+                 bindtap="bindGenderAll">全部</button>
+         <button class ="{{buttonMaleType}}" 
+                 bindtap="bindGenderMale">男</button>
+         <button class ="{{buttonFemaleType}}" 
+                 bindtap="bindGenderFemale">女</button>
+      </view>
+   </view>
+
+   <view class="line_style"/>
+
+   <view class = "view_item">
+       <text class="title_item">年龄</text>
+       <picker class="picker_item"
+               bindchange="bindAgeChange" 
+               value="{{age}}" 
+               range="{{ages}}">{{ages[age]}} ></picker>
+    </view>
+
+   <view class="line_style"/>
+
+   <view class = "view_item">
+       <text class="title_item">身高</text>
+       <picker class="picker_item"
+            bindchange="bindHeightChange" 
+            value="{{height}}" 
+            range="{{heights}}">
+            {{heights[height]}} ></picker>
+    </view>
+
+    <view class="line_style"/>
+
+    <view class = "view_item">
+       <text class="title_item">租金</text>
+       <picker class="picker_item"
+            bindchange="bindPriceChange" 
+            value="{{price}}" 
+            range="{{prices}}">
+            {{prices[price]}} ></picker>
+    </view>
+
+     <view class="line_style"/>
+
+    <view class = "view_item">
+       <text class="title_item">职业</text>
+       <picker class="picker_item"
+            bindchange="bindProfessionChange" 
+            value="{{profession}}" 
+            range="{{professions}}">
+            {{professions[profession]}} ></picker>
+    </view>
+
+     <view class="line_style"/>
+
+     <button type="primary" class="btn_confirm" bindtap="bindConfirmButton">确定</button>
+
+</view>

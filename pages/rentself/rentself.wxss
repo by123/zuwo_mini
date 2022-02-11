@@ -1,0 +1,197 @@
+@import "../common/lib/weui.wxss";
+.button-sp-area{
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 60%;
+}
+.mini-btn{
+    margin-right: 5px;
+}
+.page {
+    padding-bottom: 20rpx;
+}
+/*.container{*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*background-color: white;*/
+/*}*/
+
+/*.part1*/
+/*{*/
+    /*display:flex; */
+    /*margin-left: 20rpx;*/
+    /*margin-right: 20rpx;*/
+    /*margin-top: 20rpx;*/
+    /*flex-direction: column;*/
+
+/*}*/
+
+/*.btn_photo{*/
+    /*width: 100%;*/
+    /*background-color: orangered;*/
+    /*color: white;*/
+/*}*/
+
+/*.line1_style{*/
+  /*background-color: lightgray;*/
+  /*width: 100%;*/
+  /*height: 1rpx;*/
+/*}*/
+
+
+/*.txt_contact*/
+/*{*/
+    /*margin-top: 20rpx;*/
+/*}*/
+
+/*.view_qq*/
+/*{*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*margin-top: 20rpx;*/
+    /*align-items: center;*/
+
+/*}*/
+
+/*.txt_contact_style*/
+/*{*/
+   /*width: 80rpx;*/
+/*}*/
+
+/*.input_contact_style*/
+/*{*/
+    /*background: lightgray;*/
+    /*margin-left: 40rpx;*/
+    /*padding-left: 10rpx;*/
+    /*padding-right: 10rpx;*/
+    /*width: 400rpx;*/
+    /*height: 60rpx;*/
+    /*border-radius: 10rpx;*/
+/*}*/
+
+
+/*.view_wechat*/
+/*{*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*margin-top: 20rpx;*/
+    /*align-items: center;*/
+/*}*/
+
+/*.line2_style{*/
+  /*background-color: lightgray;*/
+  /*width: 100%;*/
+  /*height: 1rpx;*/
+  /*margin-top: 20rpx;*/
+/*}*/
+
+
+/*.view_range*/
+/*{*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*margin-top: 20rpx;*/
+/*}*/
+
+/*.range_group*/
+/*{*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*word-spacing: 10rpx;*/
+/*}*/
+
+/*.range_checkbox*/
+/*{*/
+    /*margin-top: 10rpx;*/
+/*}*/
+
+
+/*.txt_profession*/
+/*{*/
+    /*display: flex;*/
+    /*margin-top: 20rpx;*/
+/*}*/
+
+/*.view_profession*/
+/*{*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*margin-top: 20rpx;*/
+/*}*/
+
+/*.profession_group*/
+/*{*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*word-spacing: 10rpx;*/
+/*}*/
+
+/*.profession_checkbox*/
+/*{*/
+    /*margin-top: 10rpx;*/
+/*}*/
+
+/*.view_price*/
+/*{*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*margin-top: 20rpx;*/
+/*}*/
+
+
+/*.view_price_content*/
+/*{*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*margin-top: 20rpx;*/
+    /*align-items:Center;*/
+/*}*/
+
+/*.input_price_style*/
+/*{*/
+    /*background: lightgray;*/
+    /*padding-left: 10rpx;*/
+    /*padding-right: 10rpx;*/
+    /*width: 300rpx;*/
+    /*height: 60rpx;*/
+    /*border-radius: 10rpx;*/
+/*}*/
+
+/*.txt_per_price*/
+/*{*/
+     /*display: flex;*/
+     /*flex-direction: row;*/
+     /*margin-left: 20rpx;*/
+/*}*/
+
+/*.price_checkbox*/
+/*{*/
+    /*margin-left: 20rpx;*/
+/*}*/
+
+/*.input_description_style*/
+/*{*/
+
+    /*background: lightgray;*/
+    /*padding-left: 10rpx;*/
+    /*padding-right: 10rpx;*/
+    /*width: 100%-5rpx;*/
+    /*height: 60rpx;*/
+    /*border-radius: 10rpx; */
+/*}*/
+
+/*.view_age*/
+/*{*/
+    /*margin-top: 20rpx;*/
+/*}*/
+
+/*.slider_age*/
+/*{*/
+    /*margin-left: 60rpx;*/
+    /*margin-right: 60rpx;*/
+/*}*/
+
+/*.btn_send*/
+/*{*/
+    /*width: 100%;*/
+/*}*/

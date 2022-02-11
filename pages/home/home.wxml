@@ -1,0 +1,62 @@
+<view class="top_bar">
+    <!--<picker bindchange="bindPickerChange" value="{{index}}" range="{{citys}}">
+        <view class="picker">
+            {{citys[index]}}
+        </view>
+    </picker>
+
+  -->
+    <view class="txt_position" bindtap="bindGetPosition">{{position}}</view>
+      <image src="../../img/ic_position.png" class="img_city_select"></image>
+    <input class="input" placeholder="请输入昵称/职业/ID进行搜索" bindinput="bindKeyInput" bindconfirm="bindConfirmInput"></input>
+
+    <image src="../../img/ic_other_select.png" class="img_other_select" bindtap="bindOtherSelect"></image>
+
+
+</view>
+
+<scroll-view scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad"
+             class="scrollview">
+
+    <view wx:if="{{isRefesh}}" class="view_top">
+        <text class="txt_top">{{refreshTxt}}</text>
+    </view>
+    <view wx:else style="display:none">
+        <text></text>
+    </view>
+
+
+    <view class="item" wx:for="{{list}}">
+        <image src="{{item.avatar}}" bindtap="bindBtnClicked" data-id="{{item.id}}" class="img_show" mode="widthFix"/>
+
+        <view class="row1">
+            <text class="txt_nickname">{{item.nickname}}</text>
+            <image src="{{item.sex=='man' ? '../../img/ic_male.png' : '../../img/ic_female.png'}}" class="img_gender"/>
+            <text class="txt_price">${{item.rent}}/小时</text>
+        </view>
+
+        <view class="row2">
+            <image src="../../img/ic_position_grey.png" class="location_img"></image>
+            <text class="txt_city">{{item.city == '' ? item.province : item.city}}</text>
+            <text class="txt_job">{{item.job}}</text>
+
+        </view>
+
+        <view class="row3">
+            <text class="txt_description">{{item.description}}</text>
+        </view>
+
+        <button class="btn_detail" type="default" bindtap="bindBtnClicked" data-id="{{item.id}}">查看联系方式</button>
+    </view>
+
+    <view wx:if="{{isLoadMore}}" class="view_bottom">
+        <text>{{loadMoreTxt}}</text>
+    </view>
+    <view wx:else style="display:none">
+        <text></text>
+    </view>
+</scroll-view>
+
+
+
+

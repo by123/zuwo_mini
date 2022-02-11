@@ -1,0 +1,45 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view class="top-bar">
+    <view class="location-picker">
+      <picker bindchange="bindPickerChange" value="{{city_index}}" range="{{citys}}">
+        <view class="picker">
+          {{citys[city_index]}}
+        </view>
+      </picker>
+    </view>
+    <view class="search">
+      <input placeholder="请输入昵称/职业/ID" />
+    </view>
+    <view class="filter">
+      <image src="../../img/ing.png"></image>
+    </view>
+  </view>
+  <view class="list-item" wx:for="{{users}}">
+    <image src="{{item.avatar}}" mode="widthFix" class="cover_img" data-id="{{item.id}}" bindtap="onCoverImgTab"></image>
+    <view class="user-info">
+      <view class="user-info-left">
+        <view>
+          <text>{{item.name}} </text>
+          <text wx:if="{{item.sex=='man'}}">男</text>
+          <text wx:else="{{item.sex=='woman'}}">女</text>
+        </view>
+        <view>
+          <text>{{item.location}} {{item.job}}</text>
+        </view>
+      </view>
+      <view class="user-info-right">
+        <view>
+          <text class="user-info-price">¥ {{item.price}}/时</text>
+        </view>
+        <view>
+          <button type="primary" size="mini" class="buy_btn" data-id="{{item.id}}" bindtap="onBuyBtnTab">查看联系方式</button>
+        </view>
+      </view>
+    </view>
+    <view class="user-info-desc">
+      <text>{{item.desc}}</text>
+    </view>
+  </view>
+</view>
